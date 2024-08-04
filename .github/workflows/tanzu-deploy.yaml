@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy application to Tanzu Platform
         #uses: ryan-a-baker/tanzu-deploy-action@main
-        uses: cpage-pivotal/tanzu-deploy-action@1.4
+        uses: cpage-pivotal/tanzu-deploy-action@1.3
         with:
           tanzu_api_token: ${{ secrets.TanzuApiToken }}
           container_registry: ghcr.io/${{ github.actor }}/spring-music
