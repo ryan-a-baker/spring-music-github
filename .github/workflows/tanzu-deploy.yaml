@@ -19,7 +19,7 @@ jobs:
         with:
           tanzu_api_token: ${{ secrets.TanzuApiToken }}
           container_registry: ghcr.io/${{ github.actor }}/<<ENTER VALUE>>
-          buildPlanSource: simple.tanzu.vmware.com
+          #buildPlanSource: simple.tanzu.vmware.com
           javaVersion: 17
           project: rbaker-project
           space: spring-music-prod
