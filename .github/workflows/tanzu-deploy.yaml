@@ -22,4 +22,4 @@ jobs:
           buildPlanSource: simple.tanzu.vmware.com
           javaVersion: 17
           project: rbaker-project
-          space: space-demo-prod
+          space: spring-music-prod
