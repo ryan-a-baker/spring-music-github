@@ -18,7 +18,7 @@ jobs:
         uses: ryan-a-baker/tanzu-deploy-action@main
         with:
           tanzu_api_token: ${{ secrets.TanzuApiToken }}
-          container_registry: ghcr.io/${{ github.actor }}/<<ENTER VALUE>>
+          container_registry: ghcr.io/${{ github.actor }}/wfd
           #buildPlanSource: simple.tanzu.vmware.com
           javaVersion: 17
           project: rbaker-project
