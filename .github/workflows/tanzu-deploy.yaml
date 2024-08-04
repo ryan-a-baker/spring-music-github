@@ -14,8 +14,15 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy application to Tanzu Platform
-        #uses: ryan-a-baker/tanzu-deploy-action@main
+      - name: Deploy application to Tanzu Platform - Stage
+        uses: cpage-pivotal/tanzu-deploy-action@v1.3
+        with:
+          tanzu_api_token: ${{ secrets.TanzuApiToken }}
+          container_registry: ghcr.io/${{ github.actor }}/spring-music
+          javaVersion: 17
+          project: rbaker-project
+          space: spring-music-stage
+      - name: Deploy application to Tanzu Platform - Prod
         uses: cpage-pivotal/tanzu-deploy-action@v1.3
         with:
           tanzu_api_token: ${{ secrets.TanzuApiToken }}
